@@ -1,18 +1,30 @@
-## Getting Started
+#  Relógio Java 
+Exercício da DIO de Programação Orientada a Objetos em Java.
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Um Relógio que funciona em dois formatos e converte um no outro.
 
-## Folder Structure
+## O que o projeto faz
+- **BRLClock** Relógio Brasileiro no formato 24h (ex: "23:00:00")
+- **USAClock** Relógio Americano no formato 12h com AM/PM (ex: "11:00:00")
+- **Convert** Transforma um relógio no outro
 
-The workspace contains two folders by default, where:
+## Como Funciona
+'''Java
+Clock brlClock = new BRLClock();
+brclClock.setHour(23);
+System.out.println(brlClock.getTime()); // 23:00:00
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+Clock usaClock = new USAClock();
+usaClock.convert(brlClock);
+System.out.println(usaClock.getTime()); // 11:00:00
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+## Regra de Validação
+- Hora no Relógio brasileiro trava em 23 se passar disso
+- Hora no Relógio americano vai até 12 e usa AM/PM
+- Minuto e segundo travam em 59
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+## Tecnologias
+- JAVA
+- VS Code
 
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+feito por Mcollecta
